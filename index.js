@@ -1,7 +1,7 @@
 function calculateAge() {
   var today = new Date();
   var birthDate = new Date();
-
+  var flag = true;
   // Get the input values
   var day = document.getElementById("day").value;
   var month = document.getElementById("month").value;
@@ -17,36 +17,45 @@ function calculateAge() {
   var dayDiff;
 
   if (year == "") {
+    flag = false;
     document.getElementById("err3").innerHTML = "required";
     my.classList.add("error");
   } else if (year >= today.getFullYear()) {
+    flag = false;
     document.getElementById("err3").innerHTML = "most be in the past";
     my.classList.add("error");
   } else {
+    flag = true;
     my.classList.remove("error");
   }
 
   if (month == "") {
+    flag = false;
     document.getElementById("err2").innerHTML = "required";
     mc.classList.add("error");
   } else if (month > 12) {
+    flag = false;
     document.getElementById("err2").innerHTML = "most be avalid month";
     mc.classList.add("error");
   } else {
+    flag = true;
     mc.classList.remove("error");
   }
 
   if (day == "") {
+    flag = false;
     document.getElementById("err").innerHTML = "required";
     md.classList.add("error");
   } else if (day > 31) {
+    flag = false;
     document.getElementById("err").innerHTML = "most be avalid day";
     md.classList.add("error");
   } else {
+    flag = true;
     md.classList.remove("error");
   }
 
-  if (year !== "" && month !== "" && day != "") {
+  if (flag) {
     document.getElementById("err3").innerHTML = "";
     document.getElementById("err2").innerHTML = "";
     document.getElementById("err").innerHTML = "";
