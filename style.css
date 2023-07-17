@@ -1,0 +1,141 @@
+@font-face {
+  font-family: poppinsbold;
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: poppinsregular;
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: poppinsboldItalic;
+  src: url("./assets/fonts/Poppins-BoldItalic.ttf");
+}
+@font-face {
+  font-family: Poppins-ExtraBoldItalic;
+  src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+@font-face {
+  font-family: Poppins-Italic;
+  src: url("./assets/fonts/Poppins-Italic.ttf");
+}
+body {
+  background: #f0f0f0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.container {
+  text-align: center;
+  width: 35%;
+  padding-top: 12px;
+  border-radius: 20px 25px 120px 25px;
+  background-color: white;
+}
+.inputs {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 18px;
+  width: 70%;
+  margin-left: 20px;
+}
+label {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "poppinsbold", sans-serif;
+  font-size: 8px;
+  color: gray;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.filed {
+  width: 95%;
+  border-radius: 5px;
+  height: 40px;
+  border: 1px #d2cfcf solid;
+  font-family: "poppinsbold";
+  font-size: 18px;
+  padding-left: 12px;
+}
+.filed:focus,
+.filed:focus-visible {
+  border: 1px #864dfe solid;
+  outline: unset;
+}
+.parent {
+  width: 95%;
+  display: grid;
+  margin-left: 16px;
+  margin-right: 12px;
+}
+hr {
+  width: 75%;
+  background-color: #d2cfcf;
+  border: unset;
+  height: 1px;
+}
+img {
+  background: #864dfe;
+  border-radius: 100%;
+  height: 30px;
+  padding: 14px;
+  position: relative;
+  right: 45px;
+}
+img:hover {
+  background: black;
+  cursor: pointer;
+}
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+.parent2 {
+  font-family: "Poppins-ExtraBoldItalic", sans-serif;
+  display: block;
+  text-align: left;
+  margin-left: 10%;
+  font-size: 50px;
+  margin-bottom: 16px;
+}
+span {
+  color: #864dfe;
+}
+p {
+  color: red;
+  font-size: 10px;
+  font-family: "Poppins-Italic";
+  margin: 0;
+  display: flex;
+  position: relative;
+  top: 0;
+}
+.parent.error input {
+  border: 1px solid red;
+}
+.parent.error label {
+  color: red;
+}
+@media (max-width: 375px) {
+  .container {
+    width: 90%;
+  }
+  img {
+    right: 140px;
+  }
+  hr {
+    width: 95%;
+    position: relative;
+    left: 25px;
+  }
+  .filed {
+    width: 70px;
+  }
+  .parent {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+}
