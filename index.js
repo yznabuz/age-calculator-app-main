@@ -6,6 +6,8 @@ function calculateAge() {
   var day = document.getElementById("day").value;
   var month = document.getElementById("month").value;
   var year = document.getElementById("year").value;
+
+  // error
   var mc = document.getElementById("mc");
   var my = document.getElementById("my");
   var md = document.getElementById("md");
